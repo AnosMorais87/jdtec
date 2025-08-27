@@ -3,7 +3,33 @@
   <head>
     <title>J&D Tecnologias</title>
     <meta charset="utf-8">
-    <style>#icon { width: 25px; height: 25px; position: absolute; top: 0; left: 0; }</style>
+    <style>/* Ícone de página inicial: 28px, clicável e com leve animação */
+#homeIcon{
+  width: 28px;
+  height: 28px;
+  display: inline-block;          /* mantém tamanho fixo */
+  object-fit: cover;              /* ajusta a imagem sem distorcer */
+  border-radius: 6px;             /* cantos levemente arredondados */
+  cursor: pointer;                /* mãozinha ao passar o mouse */
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+}
+
+/* Efeito ao passar o mouse (opcional) */
+#homeIcon:hover{
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Versão compacta para telas muito pequenas (opcional) */
+@media (max-width: 420px){
+  #homeIcon{
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+  }
+}
+</style></style>
   </head>
   <body>
     <div id= icon><img src="icon.png"></img></div>
