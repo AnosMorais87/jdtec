@@ -5,20 +5,14 @@
     <meta charset="utf-8">
     <style>/* Ícone de página inicial: 28px, clicável e com leve animação */
 #homeIcon{
-  width: 28px;
-  height: 28px;
+  width: 16px;
+  height: 16px;
   display: inline-block;          /* mantém tamanho fixo */
   object-fit: cover;              /* ajusta a imagem sem distorcer */
   border-radius: 6px;             /* cantos levemente arredondados */
   cursor: pointer;                /* mãozinha ao passar o mouse */
-  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease
   box-shadow: 0 1px 3px rgba(0,0,0,.15);
-}
-
-/* Efeito ao passar o mouse (opcional) */
-#homeIcon:hover{
-  transform: scale(1.05);
-  filter: brightness(1.05);
 }
 
 /* Versão compacta para telas muito pequenas (opcional) */
@@ -29,13 +23,11 @@
     border-radius: 5px;
   }
 }
-      .a {
-  position: absolute !important; 
-  width: 1px; height: 1px; 
-  padding: 0; margin: -1px; 
-  overflow: hidden; clip: rect(0 0 0 0); 
-  white-space: nowrap; border: 0;
-      }
+  a.a {
+  color: inherit;            /* Pega a mesma cor do texto ao redor */
+  text-decoration: none;     /* Remove o sublinhado padrão do link */
+  pointer-events: none;
+  }
 </style>
   </head>
   <body>
