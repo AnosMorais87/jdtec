@@ -11,6 +11,7 @@
       <option value="sim"> Sim</option>
       <option value="não">Não</option>
     </select>
-    <script> const resposta = document.querySelector("#a"); if resposta.value == "sim" { window.location.replace("reserva/subindex.html"); } else if resposta.value == "não" {window.location.replace("../index.html") } else {}</script>
+    <button onclick="Verificar()">Confirmar</button>
+    <script> const resposta = document.querySelector("#a"); function Verificar() { if resposta.value == "sim" { window.location.replace("reserva/subindex.html"); } else if resposta.value == "não" {window.location.replace("../index.html") } } else {}</script>
   </body>
 </html>
