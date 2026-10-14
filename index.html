@@ -23,16 +23,20 @@
     border-radius: 5px;
   }
 }
-  a.a {
-  color: inherit;            /* Pega a mesma cor do texto ao redor */
-  text-decoration: none;     /* Remove o sublinhado padrão do link */
-  pointer-events: none;
-  }
+  .link-camuflado {
+  color: inherit;         /* Herda a mesma cor do texto do parágrafo */
+  text-decoration: none;  /* Remove o sublinhado padrão do link */
+}
+
+/* Opcional: faz mudar de cor ou reaparecer ao passar o mouse */
+.link-camuflado:hover {
+  text-decoration: underline; 
+}
 </style>
   </head>
   <body>
     <div id= homeIcon><img src="icon.png"></img></div>
-    <h1><a href="equipe/equipe.html" class="a">J</a>&D Tecnologias</h1> <h3>AVISO: Esse site ainda está em desenvolvimento.</h3>
+    <h1>J&D Tecnologias</h1> <h3>AVISO: Esse site ainda está em <a href="equipe/equipe.html" class="link-camuflado">desenvolvimento.</a></h3>
     <a href="index.php">Conta J&D/ID</a>
     <a href= "jdg/subindex.html">J&D Jogos</a>
     <a href= "jdv/subindex.html">J&D Vídeos</a>
