@@ -4,25 +4,18 @@
     <title>J&D Tecnologias</title>
     <meta charset="utf-8">
     <style>/* Ícone de página inicial: 28px, clicável e com leve animação */
-#homeIcon{
-  width: 16px;
-  height: 16px;
-  display: inline-block;          /* mantém tamanho fixo */
-  object-fit: cover;              /* ajusta a imagem sem distorcer */
-  border-radius: 6px;             /* cantos levemente arredondados */
-  cursor: pointer;                /* mãozinha ao passar o mouse */
-  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease
-  box-shadow: 0 1px 3px rgba(0,0,0,.15);
-}
-
-/* Versão compacta para telas muito pequenas (opcional) */
-@media (max-width: 420px){
-  #homeIcon{
-    width: 24px;
-    height: 24px;
-    border-radius: 5px;
-  }
-}
+      .logo-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-container img {
+        width: 40px;
+        height: auto;
+      }
   .link-camuflado {
   color: inherit;         /* Herda a mesma cor do texto do parágrafo */
   text-decoration: none;  /* Remove o sublinhado padrão do link */
@@ -30,8 +23,11 @@
 </style>
   </head>
   <body>
-    <div id= homeIcon><img src="icon.png"></img></div>
-    <h1>J&D Tecnologias</h1> <h3>AVISO: Esse site ainda está em <a href="equipe/equipe.html" class="link-camuflado">desenvolvimento.</a></h3>
+    <div class="logo-container">
+    <img src="icon.png" alt="Logotipo" class="homeIcon></img>
+    <h1 class="title">J&D Tecnologias</h1> 
+      </div> 
+      <h3>AVISO: Esse site ainda está em <a href="equipe/equipe.html" class="link-camuflado">desenvolvimento.</a></h3>
     <a href="index.php">Conta J&D/ID</a>
     <a href= "jdg/subindex.html">J&D Jogos</a>
     <a href= "jdv/subindex.html">J&D Vídeos</a>
