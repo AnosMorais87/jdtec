@@ -3,19 +3,55 @@
   <head>
     <title>J&D Tecnologias</title>
     <meta charset="utf-8">
-    <style>/* Ícone de página inicial: 28px, clicável e com leve animação */
-      .logo-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo-container img {
-        width: 40px;
-        height: auto;
-      }
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1c1c1c;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.logo span {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #00aaff;
+}
+      
   .link-camuflado {
   color: inherit;         /* Herda a mesma cor do texto do parágrafo */
   text-decoration: none;  /* Remove o sublinhado padrão do link */
@@ -23,13 +59,21 @@
 </style>
   </head>
   <body>
-    <div class="logo-container">
-    <img src="icon.png" alt="Logotipo" class="homeIcon></img>
-    <h1 class="title">J&D Tecnologias</h1> 
-      </div> 
-      <h3>AVISO: Esse site ainda está em <a href="equipe/equipe.html" class="link-camuflado">desenvolvimento.</a></h3>
-    <a href="index.php">Conta J&D/ID</a>
-    <a href= "jdg/subindex.html">J&D Jogos</a>
-    <a href= "jdv/subindex.html">J&D Vídeos</a>
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="J&D Tecnologias">
+            <span>J&D Tecnologias</span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="https://anosmorais87.github.com/jdtec">Início</a></li>
+            <li><a href="https://anosmorais87.github.com/jdtec/jdg/subindex.html">Jogos</a></li>
+            <li><a href="https://anosmorais87.github.com/jdtec/jdv/subindex.html">Animações</a></li>
+            <li>E o pix? Nada ainda?</li>
+        </ul>
+    </nav>
+    </header>
+    <h3>AVISO: Esse site aionda está em <a href="equipe/equipe.html" class="link-camuflado">desenvolvimento.</a></h3>
   </body>
 </html>
