@@ -7,11 +7,89 @@
   </head>
   <body>
    <p>Voce foi convidado para a equipe de desenvolvimento da J&D Tecnologias?</p>
-    <select id="a">
-      <option value="sim"> Sim</option>
-      <option value="não">Não</option>
-    </select>
-    <button onclick="Verificar()">Confirmar</button>
-    <script> const resposta = document.querySelector("#a"); function Verificar() { if resposta.value == "sim" { window.location.replace("reserva/subindex.html"); } else if resposta.value == "não" {window.location.replace("../index.html") } } else {}</script>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <input type="password"
+                    id="pinpad-input"
+                    readonly />
+            </div>
+            <div>
+                <div class="row">
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="1">
+                            1
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="2">
+                            2
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="3">
+                            3
+                    </button>
+                </div>
+                <div class="row">
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="4">
+                            4
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="5">
+                            5
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="6">
+                            6
+                    </button>
+                </div>
+                <div class="row">
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="7">
+                            7
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="8">
+                            8
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="9">
+                            9
+                    </button>
+                    
+                </div>
+                <div class="row">
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="del
+                            "
+                        id="delete-btn">
+                        Del
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="0">
+                            0
+                    </button>
+                    <button type="button"
+                            class="pinpad-btn"
+                            value="ok"
+                            id="submit-btn">
+                        Ok
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+    <script src="idem.js"></script>
   </body>
 </html>
