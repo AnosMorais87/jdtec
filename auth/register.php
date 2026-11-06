@@ -18,13 +18,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Inserir novo usuário
-    $sql = $conn->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
-    $sql->bind_param("sss", $nome, $email, $senha);
+    // Verificar se é o primeiro usuário
+    $result = $conn->query("SELECT COUNT(*) AS total FROM usuarios");
+    $row = $result->fetch_assoc();
+
+    if ($row["total"] == 0) {
+        $rank = 20; // ADMIN
+    } else {
+        $rank = 1; // Usuário normal
+    }
+
+    // Inserir novo usuário com rank
+    $sql = $conn->prepare("INSERT INTO usuarios (nome, email, senha, rank) VALUES (?, ?, ?, ?)");
+    $sql->bind_param("sssi", $nome, $email, $senha, $rank);
 
     if ($sql->execute()) {
-        echo "Cadastro realizado com sucesso!";
-        echo "<br><a href='login.php'>Ir para o login</a>";
+        echo "Cadastro realizado com sucesso!<br>";
+        echo "Seu rank é: <strong>$rank</strong><br>";
+        echo "<a href='login.php'>Ir para o login</a>";
     } else {
         echo "Erro ao cadastrar: " . $sql->error;
     }
