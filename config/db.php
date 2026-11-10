@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "SUA_SENHA";
+$pass = "m64";
 $db   = "sistema_contas";
 
 $conn = new mysqli($host, $user, $pass, $db);
